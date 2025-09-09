@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>David Klunder — Portfolio</title>
+  <meta name="description" content="Portfolio and resume for David Klunder, Mechanical Engineering student at SDSU. Projects, experience, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { 50: '#edfff7', 100: '#d7ffef', 200: '#b0f7de', 300: '#7feecb', 400: '#42e1b1', 500: '#17c792', 600: '#0ea67b', 700: '#0d8263', 800: '#0e654f', 900: '#0e5241' } },
+          boxShadow: { soft: '0 10px 30px -12px rgba(0,0,0,0.25)' }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    :root { --shift: 0; }
+    body {
+      background: radial-gradient(1200px 600px at 70% calc(10% + var(--shift)*1px), rgba(14,101,79,.08), transparent 55%),
+                  radial-gradient(900px 500px at 20% calc(40% + var(--shift)*-1px), rgba(23,199,146,.08), transparent 60%),
+                  linear-gradient(180deg, #f8fbfa, #ffffff);
+      transition: background-position .15s linear;
+    }
+    .dark body { background: #0b1220; }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade { animation: none !important; }
+    }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade { animation: fade .6s ease both; }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="font-extrabold tracking-tight text-xl">DK<span class="text-brand-600">·</span></a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#projects" class="hover:text-brand-600">Projects</a>
+        <a href="#experience" class="hover:text-brand-600">Experience</a>
+        <a href="#skills" class="hover:text-brand-600">Skills</a>
+        <a href="#education" class="hover:text-brand-600">Education</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="David_Klunder_RESUME_9_4_25.pdf" class="hidden sm:inline-flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold border border-slate-300/70 hover:shadow-soft" download>Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div class="animate-fade">
+        <h1 class="text-4xl sm:text-5xl font-black">David Klunder</h1>
+        <p class="mt-2 text-lg text-slate-600">Mechanical Engineering Student · San Diego State University · Graduating May 2026</p>
+        <p class="mt-4 text-slate-600 max-w-xl">Experience across design, test engineering, manufacturing, and data analysis. Passionate about performance and efficiency engineering.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="px-5 py-3 rounded-2xl bg-brand-600 text-white font-semibold shadow-soft hover:brightness-95">View Projects</a>
+          <a href="#contact" class="px-5 py-3 rounded-2xl border border-slate-300/70 font-semibold hover:shadow-soft">Contact</a>
+        </div>
+      </div>
+      <div class="mx-auto md:mx-0 w-56 h-56 rounded-3xl overflow-hidden border border-slate-200 shadow-soft">
+        <img src="headshot.jpg" alt="David Klunder headshot" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects: clickable "cards" with Apple-like lift -->
+  <section id="projects" class="py-14 sm:py-20 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-3xl font-extrabold">Selected Projects</h2>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="proj-ice.html" class="group block rounded-2xl border border-slate-200 bg-white p-5 transition-transform duration-200 will-change-transform hover:-translate-y-1 hover:shadow-xl">
+          <div class="aspect-[16/10] rounded-xl bg-slate-100 mb-4 group-hover:bg-slate-200 transition"></div>
+          <h3 class="font-bold">High‑Throughput Automated Ice Adhesion Test</h3>
+          <p class="mt-2 text-sm text-slate-600">LabVIEW rig, −40 °C Peltier, MATLAB batch analysis.</p>
+        </a>
+        <a href="proj-telemetry.html" class="group block rounded-2xl border border-slate-200 bg-white p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="aspect-[16/10] rounded-xl bg-slate-100 mb-4 group-hover:bg-slate-200 transition"></div>
+          <h3 class="font-bold">Python Live Racing Telemetry</h3>
+          <p class="mt-2 text-sm text-slate-600">10‑s rolling plot + session reports.</p>
+        </a>
+        <a href="proj-frs.html" class="group block rounded-2xl border border-slate-200 bg-white p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="aspect-[16/10] rounded-xl bg-slate-100 mb-4 group-hover:bg-slate-200 transition"></div>
+          <h3 class="font-bold">2014 Scion FR‑S Adjustable Pedal Spacer</h3>
+          <p class="mt-2 text-sm text-slate-600">25 mm raise, CAD + FEA, printed and installed.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience: collapsible bullets -->
+  <section id="experience" class="py-14 sm:py-20 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Experience</h2>
+      <ul class="mt-8 space-y-6">
+        <li class="border rounded-2xl p-5 bg-white">
+          <div class="flex items-center justify-between gap-4 flex-wrap">
+            <h3 class="font-bold">Engineering Intern — SpaceX (May 2025 – Aug 2025)</h3>
+            <button class="toggle text-sm font-semibold px-3 py-1 rounded-xl border hover:shadow" data-target="#xp-spacex">Show more</button>
+          </div>
+          <ul id="xp-spacex" class="mt-3 space-y-1 text-sm" data-collapsed>
+            <li>Owned design + integration of automated HV test system for Starship flight batteries.</li>
+            <li>Built enclosed chambers and custom fixtures in NX; sped setup with pneumatics.</li>
+            <li class="">Ran DoE, refined detection algorithms (≫90% precision), led RCA.</li>
+          </ul>
+        </li>
+
+        <li class="border rounded-2xl p-5 bg-white">
+          <div class="flex items-center justify-between gap-4 flex-wrap">
+            <h3 class="font-bold">Mechanical Engineering Intern — LBNL (May 2024 – Aug 2024)</h3>
+            <button class="toggle text-sm font-semibold px-3 py-1 rounded-xl border hover:shadow" data-target="#xp-lbnl">Show more</button>
+          </div>
+          <ul id="xp-lbnl" class="mt-3 space-y-1 text-sm" data-collapsed>
+            <li>Automated ice-adhesion platform with XYZ motors, load cells, thermocouples.</li>
+            <li>LabVIEW & MATLAB automation; −40 °C via Peltier.</li>
+            <li class="">CAD in SOLIDWORKS; FEA validation; femtosecond laser ops.</li>
+          </ul>
+        </li>
+
+        <li class="border rounded-2xl p-5 bg-white">
+          <div class="flex items-center justify-between gap-4 flex-wrap">
+            <h3 class="font-bold">Research Assistant — SDSU Advanced Materials Processing Lab (Jan 2024 – May 2025)</h3>
+            <button class="toggle text-sm font-semibold px-3 py-1 rounded-xl border hover:shadow" data-target="#xp-sdsu">Show more</button>
+          </div>
+          <ul id="xp-sdsu" class="mt-3 space-y-1 text-sm" data-collapsed>
+            <li>SiC composite foams via advanced powder metallurgy techniques.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills: four cards like screenshot -->
+  <section id="skills" class="py-14 sm:py-20 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-500 font-bold">Technical Expertise</div>
+        <h2 class="text-3xl font-extrabold mt-2">Skills</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Comprehensive technical skills spanning engineering design, programming, manufacturing processes, and advanced research methodologies.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-5 bg-white hover:shadow-xl transition">
+          <h3 class="font-semibold flex items-center gap-2">🔧 Engineering &amp; CAD</h3>
+          <ul class="mt-3 divide-y rounded-xl border overflow-hidden">
+            <li class="px-4 py-3 text-sm"><strong>Siemens NX</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>SOLIDWORKS</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>FEA</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>CAD Design</strong></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border p-5 bg-white hover:shadow-xl transition">
+          <h3 class="font-semibold flex items-center gap-2">🧮 Programming &amp; Analysis</h3>
+          <ul class="mt-3 divide-y rounded-xl border overflow-hidden">
+            <li class="px-4 py-3 text-sm"><strong>Python</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>MATLAB</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>LabVIEW</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>JavaScript</strong></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border p-5 bg-white hover:shadow-xl transition">
+          <h3 class="font-semibold flex items-center gap-2">🏭 Manufacturing</h3>
+          <ul class="mt-3 divide-y rounded-xl border overflow-hidden">
+            <li class="px-4 py-3 text-sm"><strong>CNC Machining</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>3D Printing</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>MIG Welding</strong></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border p-5 bg-white hover:shadow-xl transition">
+          <h3 class="font-semibold flex items-center gap-2">🔬 Research &amp; Analysis</h3>
+          <ul class="mt-3 divide-y rounded-xl border overflow-hidden">
+            <li class="px-4 py-3 text-sm"><strong>Materials Testing</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>Data Analysis</strong></li>
+            <li class="px-4 py-3 text-sm"><strong>DoE</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-14 sm:py-20 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Education</h2>
+      <div class="mt-8 border rounded-2xl p-5 bg-white">
+        <h3 class="font-bold">San Diego State University</h3>
+        <p class="mt-1 text-sm">B.S. Mechanical Engineering · GPA: 3.9 · May 2026</p>
+        <p class="mt-2 text-sm">Activities: Aztec Electric Racing (FSAE), Aztec Baja SAE, Tau Beta Pi, Tau Kappa Epsilon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="py-14 sm:py-20 border-t border-slate-200/70 text-center">
+    <h2 class="text-3xl font-extrabold">Resume</h2>
+    <p class="mt-2 text-slate-600">Download or view my latest resume.</p>
+    <div class="mt-6 flex justify-center gap-3">
+      <a href="David_Klunder_RESUME_9_4_25.pdf" class="px-5 py-3 rounded-2xl bg-brand-600 text-white font-semibold hover:shadow-xl hover:-translate-y-0.5 transition" download>Download PDF</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-14 sm:py-20 border-t border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-center">Contact</h2>
+      <p class="text-center mt-2 text-slate-600">Interested in opportunities, research collaboration, or technical projects? I'd love to hear from you.</p>
+      <div class="mt-10 grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <p class="text-sm text-slate-600">Currently seeking full-time engineering opportunities for post‑graduation in 2026. Open to internships, research collaborations, and technical discussions.</p>
+          <div class="mt-4 space-y-4">
+            <div class="rounded-2xl border p-4 flex items-center gap-3 bg-white hover:shadow transition">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100">📧</span>
+              <div class="text-sm"><div class="font-semibold">Email</div><a href="mailto:Dklunder3762@gmail.com" class="text-slate-600">Dklunder3762@gmail.com</a></div>
+            </div>
+            <div class="rounded-2xl border p-4 flex items-center gap-3 bg-white hover:shadow transition">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100">📞</span>
+              <div class="text-sm"><div class="font-semibold">Phone</div><div class="text-slate-600">510‑813‑3762</div></div>
+            </div>
+            <div class="rounded-2xl border p-4 flex items-center gap-3 bg-white hover:shadow transition">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100">🔗</span>
+              <div class="text-sm"><div class="font-semibold">LinkedIn</div><a target="_blank" href="https://www.linkedin.com/in/david-klunder" class="text-slate-600">linkedin.com/in/david-klunder</a></div>
+            </div>
+          </div>
+          <div class="mt-6 rounded-2xl border p-4 bg-white">
+            <div class="text-xs uppercase tracking-widest text-slate-500 font-bold">Current Status</div>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span> Available for full‑time opportunities (2026)</li>
+              <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span> Open to research collaborations</li>
+              <li class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span> Currently at SpaceX (Engineering Intern)</li>
+            </ul>
+          </div>
+        </div>
+        <form class="rounded-2xl border p-6 space-y-4 bg-white" action="https://formspree.io/f/your-form-id" method="POST">
+          <h3 class="text-xl font-semibold">Send a Message</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div><label class="text-xs uppercase text-slate-500 font-bold">Name</label><input name="name" type="text" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Your name" required></div>
+            <div><label class="text-xs uppercase text-slate-500 font-bold">Email</label><input name="email" type="email" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="your.email@example.com" required></div>
+          </div>
+          <div><label class="text-xs uppercase text-slate-500 font-bold">Subject</label><input name="subject" type="text" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="What would you like to discuss?"></div>
+          <div><label class="text-xs uppercase text-slate-500 font-bold">Message</label><textarea name="message" rows="6" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Tell me about your project, opportunity, or question..." required></textarea></div>
+          <button type="submit" class="w-full md:w-auto px-6 py-3 rounded-2xl bg-slate-900 text-white font-semibold hover:shadow-xl hover:-translate-y-0.5 transition">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-slate-500">
+    <p>&copy; <span id="year"></span> David Klunder. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Collapsible experience
+    document.querySelectorAll('.toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const list = document.querySelector(btn.getAttribute('data-target'));
+        const expanded = list.getAttribute('data-collapsed') === 'false';
+        list.querySelectorAll('.more').forEach(li => li.classList.toggle('hidden'));
+        list.setAttribute('data-collapsed', expanded ? 'true' : 'false');
+        btn.textContent = expanded ? 'Show more' : 'Show less';
+      });
+    });
+    // Subtle background shift on scroll (parallax-like)
+    window.addEventListener('scroll', () => {
+      const y = Math.round(window.scrollY * 0.3);
+      document.documentElement.style.setProperty('--shift', y);
+    }, { passive: true });
+  </script>
+</body>
+</html>
